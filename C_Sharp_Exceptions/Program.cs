@@ -30,13 +30,28 @@ namespace C_Sharp_Exceptions
             catch (Exception e)
             {
                 //Block of code to handle errors
-                Console.WriteLine(e.Message);
+                //Console.WriteLine(e.Message);
+
+                //You can also output your own error message:
+
+                Console.WriteLine("Something Went Wrong!");
 
                 //we use the variable inside the catch block (e) together with the 
                 //built -in Message property,
 
                 //Output will be 'Index was outside the bounds of the array'
 
+            }
+            //The finally statement lets you execute code, after try...catch, regardless of the result:
+
+            finally
+            {
+                Console.WriteLine("Try Catch has ended...");
+
+                //The output will be:
+
+                //Something Went Wrong!
+                //Try Catch has ended...
             }
         }
     }
